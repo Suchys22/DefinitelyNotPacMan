@@ -1,0 +1,31 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Player/FPS.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Environment" id=1]
+ambient_light_color = Color( 0.133333, 0.133333, 0.133333, 1 )
+ambient_light_energy = 2.0
+fog_enabled = true
+fog_color = Color( 0.498039, 0.403922, 0.580392, 1 )
+fog_depth_begin = 20.0
+fog_depth_end = 50.0
+tonemap_mode = 3
+
+[node name="Spatial" type="Spatial"]
+
+[node name="Ambient" type="Node" parent="."]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Ambient"]
+environment = SubResource( 1 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="Ambient"]
+light_energy = 0.1
+
+[node name="CSGBox" type="CSGBox" parent="."]
+use_collision = true
+width = 33.3819
+height = 0.0946658
+depth = 66.5456
+
+[node name="FPS" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79986, 1.39976, 1.39784 )
