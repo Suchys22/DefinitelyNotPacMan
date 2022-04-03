@@ -46,5 +46,10 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79986, 1.39976, 1.39784 )
 
 [node name="Pacman" parent="Navigation/NavigationMeshInstance" instance=ExtResource( 2 )]
 transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.32904, -0.366617, -3.73303 )
+playerNode = NodePath("../Player")
+navMapNode = NodePath("../..")
+
+[node name="Vrsek" parent="Navigation/NavigationMeshInstance/Pacman" index="1"]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 0.841559, 1.75506 )
 
 [editable path="Navigation/NavigationMeshInstance/Pacman"]
