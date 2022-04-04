@@ -23,6 +23,12 @@ material/0 = null
 [node name="Head" type="Spatial" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 
+[node name="SpotLight" type="SpotLight" parent="Head"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0 )
+light_energy = 3.0
+shadow_enabled = true
+spot_range = 15.0
+
 [node name="Camera" type="Camera" parent="Head"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00501156, 0.0203612, 0.0278959 )
 current = true
@@ -32,5 +38,5 @@ far = 500.0
 [node name="PerspCam" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.258819, 0.965926, 0, -0.965926, 0.258819, 0, 25, 10 )
 projection = 1
-size = 75.0
+size = 25.0
 far = 1000.0

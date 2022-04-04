@@ -5,7 +5,7 @@ signal player_killed()
 var path = []
 var current_node = 0
 
-export var speed = 1.5
+export var speed = 6
 
 export var playerNode: NodePath
 export var navMapNode: NodePath

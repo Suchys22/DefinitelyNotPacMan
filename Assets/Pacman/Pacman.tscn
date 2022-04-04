@@ -1,6 +1,6 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Assets/Pacman/Pacman.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Pacman/PacManReforged.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Models/pacman-0.obj" type="ArrayMesh" id=2]
 [ext_resource path="res://Assets/Models/pacman-0.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Models/pacman-1.obj" type="ArrayMesh" id=4]
@@ -192,4 +192,8 @@ anims/Close = SubResource( 7 )
 anims/Open = SubResource( 5 )
 anims/RESET = SubResource( 6 )
 
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
 [connection signal="timeout" from="PathUpdate" to="." method="_on_PathUpdate_timeout"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
